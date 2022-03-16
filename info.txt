@@ -1,0 +1,123 @@
+
+
+
+-----------------------------
+
+npm init -y
+npm i typescript -g
+npx tsc --init  //tsconfig.json 파일생성
+tsc source.ts
+
+
+ts-node index.ts
+
+-----------------------------
+
+섹션 1: Getting Started
+1. Course Introduction
+2. RxJS Overview
+
+-----------------------------
+
+3. Quick Start
+
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+
+
+4. Optional: Using your own IDE
+5. Course Plan
+6. Learning Tips
+섹션 2: Observable - how does it work?
+7. Module Introduction
+8. Array vs Stream
+9. Observable, Subscription, Observer - Key Elements
+10. Warm-up Observable - Observable, Observer, Subscription
+11. Warm-up Observable - Multiple Subscriptions
+퀴즈 1: Observable Basics
+12. Marbles Introduction
+13. Marbles - Next, Error, Complete
+14. Marbles - Notification Types Summary
+15. Marbles - Incorrect Scenarios
+16. Marbles - Appearance
+17. Marbles - Game
+18. Marbles - Docs
+퀴즈 2: Marble Diagrams and Notification Types
+19. Module Summary
+섹션 3: Exercises: Observable, Observer and Subscription
+20. Module Introduction
+21. Subscription Lifecycle
+22. Execution Timing - Empty Observable
+23. Synchronous Emission - Next Notification
+24. Asynchronous Emission - More Next Notifications
+25. Teardown - Complete Notification
+26. Error Notification
+27. Full Observer
+28. Order
+29. Cancellation - Unsubscribe
+30. Module Summary
+퀴즈 3: Subscription Lifecycle
+섹션 4: Types of Observable
+31. Module Introduction
+32. Cold Observable
+33. Hot Observable
+34. Hot vs Cold - Comparison
+35. Module Summary
+퀴즈 4: Hot vs Cold
+섹션 5: Creation Functions
+36. Module Introduction
+37. of - How Creation Functions work
+38. from
+퀴즈 5: Creation Functions - of, from
+39. fromEvent
+40. timer
+41. interval
+퀴즈 6: Creation Functions - fromEvent, timer, interval
+42. forkJoin - Handle multiple HTTP calls
+43. forkJoin - Error Scenario
+44. combineLatest - Reacting to multiple input changes
+퀴즈 7: Creation Functions - forkJoin, combineLatest
+45. Module Summary
+섹션 6: Pipeable Operators
+46. Module Introduction
+47. Operator Stacking
+48. filter
+49. map
+50. tap
+51. Learn More: tap
+52. debounceTime
+53. catchError
+퀴즈 8: Pipeable Operators
+54. Flattening Operators
+55. Flattening Operators - Static Example
+56. Flattening Operators - Dynamic HTTP Request
+57. Flattening Operators - Error Handling - First Solution
+58. Flattening Operators - Error Handling - Second Solution
+59. Flattening Operators - Concurrency - concatMap
+60. Flattening Operators - switchMap
+61. Flattening Operators - mergeMap
+62. Flattening Operators - Side by Side Comparison
+퀴즈 9: Pipeable Operators - Flattening Operators
+63. Module Summary
+섹션 7: Subjects
+64. Module Introduction
+65. Multicasting
+66. Subject vs Observable vs Observer
+67. Subject in Action
+68. BehaviorSubject - Concept
+69. BehaviorSubject in Action
+70. Module Summary
+퀴즈 10: Subjects
+섹션 8: Course Summary
+71. Course Summary
+72. Congratulations &amp; Further Steps
