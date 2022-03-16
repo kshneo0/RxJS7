@@ -38,24 +38,89 @@ ts-node index.ts
 + Subjects
 
 -----------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
-
-
-
 
 6. Learning Tips
+
+-----------------------------
+
 섹션 2: Observable - how does it work?
+
+-----------------------------
+
 7. Module Introduction
+
++ Stream
++ Observable
++ Subscription
++ Observer
++ Marble Diagrams
++ Notification Types
+
+-----------------------------
+
 8. Array vs Stream
+
+What is a stream?
+
+-----------------------------
+
 9. Observable, Subscription, Observer - Key Elements
+
+Observable 
+  + 일련의 규칙이 있는 단일 콜백 함수를 기반으로 한다.
+  + 실행 되면 알림을 보낼 수 있다.
+  + 세가지 유형이 있다.
+    + 다음 알림
+    + 오류
+    + 완료
+
++ Observable 
+const observable$ = new Observable(subscriber => {
+    subscriber.next("Alice");
+    subscriber.next("Ben");
+})
+
++ Observer
+const observer = {
+    next: value => console.log(value)
+}
+// Observer의 next함수는 Observable이 내보낸 다음 알림에 대한 동작을 제공
+
+// Observable 자체는 코드를 실행하지 않는다.
+// Observable은 내부에 콜백 함수가 저장된 스페셜 객체
+// Observer는 방출된 값에 대한 반응을 설명
+
++ Subscription
+observable$.subscribe(observer);
+
+// 각 Observable은 subscribe 메서드를 노출, 새 구독을 새작하려면 subscribe를 호출하기만 하면 된다.
+// Observable의 메서드를 사용하고 Observer를 인수로 전달할 수 있다.
+
+// 실행단계
+    Observable에서 subscribe 메서드가 호출. 
+    이 시점에서 새 구독이 만들어 진다.
+    즉, Observable의 콜백이 다음과 함께 실행된다.
+    제공된 Observer는 구독자 개체로 변환된다.
+    이 시점에서 알아야 할 중요한 것은 
+    가입자가 다음 메소드를 사용할 때마다 다음 값이 방출되고 실
+    제로 Observer의 다음 핸들러는 방출된 값으로 호출
+
+
+
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+
 10. Warm-up Observable - Observable, Observer, Subscription
 11. Warm-up Observable - Multiple Subscriptions
 퀴즈 1: Observable Basics
