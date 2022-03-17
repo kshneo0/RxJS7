@@ -1,6 +1,6 @@
 import { Observable } from "rxjs";
 
-const observable$ = new Observable((subscriber) => {
+const observable$ = new Observable<string>((subscriber) => {
   console.log("Observable executed");
 });
 
