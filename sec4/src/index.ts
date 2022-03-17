@@ -1,11 +1,22 @@
-import { ajax } from "rxjs/ajax";
+import { Observable } from "rxjs";
 
-// 32. Cold Observable
+// 33. Hot Observable
 
-const ajax$ = ajax<any>("https://random-data-api.com/api/name/random_name");
+const helloButton = document.querySelector("button#hello");
 
-ajax$.subscribe((data) => console.log('Sub 1:', data.response.first_name));
+const helloClick$ = new Observable<MouseEvent>((subscriber) => {
+  helloButton.addEventListener("click", (event: MouseEvent) => {
+    subscriber.next(event);
+  });
+});
 
-ajax$.subscribe((data) => console.log("Sub 2:", data.response.first_name));
+helloClick$.subscribe((event) =>
+  console.log("Sub 1:", event.type, event.x, event.y)
+);
 
-ajax$.subscribe((data) => console.log("Sub 3:", data.response.first_name));
+setTimeout(() => {
+  console.log("Subscription 2 starts");
+  helloClick$.subscribe((event) =>
+    console.log("Sub 2:", event.type, event.x, event.y)
+  );
+}, 5000);
