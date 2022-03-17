@@ -231,18 +231,41 @@ rxjs-playground.zip
 33. Hot Observable
 
 -----------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
-
-
 
 34. Hot vs Cold - Comparison
+
++ Cold
+  Produces the data inside
+
+  New subscriber
+    - new data
+
+  Set of values
+  HTTP Request
+  Timer/Interval
+
++ Hot
+  Multicasts the data from a common source
+
+  All subscribers
+    - common data
+
+  DOM Events
+  State
+  Subjects
+
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+
+
+
+
 35. Module Summary
 퀴즈 4: Hot vs Cold
 섹션 5: Creation Functions
