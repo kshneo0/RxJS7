@@ -262,20 +262,38 @@ Cold Observables - 구독할때마다 배출 소스를 생성
 Hot Observables - 이미 존재하는 소스를 사용. 각 활성 구독에 데이터를 멀티캐스트
 
 -----------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
------------------------------
 
-
-
-
-
-퀴즈 4: Hot vs Cold
 섹션 5: Creation Functions
+
+-----------------------------
+
 36. Module Introduction
+
++ of - 인수로 제공된 값을 내보내고 완료
++ from - 배열, Promise, Iterable같은 것을 Observable로 변환
++ fromEvent - 일부 이벤트 대상에서 Observable을 생성
+  + subscribe - add
+  + unsubscribe - removeEventListener
++ interval/timer - 약간의 지연또는 간격이 있는 알림을 내보내는 Observable을 생성
+  - setTimeout, setInterval과 같은 역할
++ forkJoin - Observable 배열을 입력으로 받아들인다.
+  - 이 모든 Observable이 완료되면 각각에 의해 방출된 최신 값의 집합이 된다.
+  - 몇 번의 HTTP 호출 결과를 기다려야 하는 경우에 매우 유용.
++ combineLatest - 여러 입력 Observable도 허용
+  - 그들 중 하나가 새로운 것을 방출 할 때마다 최신 값의 결합된 세트가 배열로 방출
+
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+-----------------------------
+
+
+
+
+
+
+
 37. of - How Creation Functions work
 38. from
 퀴즈 5: Creation Functions - of, from
