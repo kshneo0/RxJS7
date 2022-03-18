@@ -326,6 +326,9 @@ unsubscribe() <---> removeEventListener()
 40. timer
 
 -----------------------------
+
+41. interval
+
 -----------------------------
 -----------------------------
 -----------------------------
@@ -337,7 +340,7 @@ unsubscribe() <---> removeEventListener()
 -----------------------------
 -----------------------------
 
-41. interval
+
 퀴즈 6: Creation Functions - fromEvent, timer, interval
 42. forkJoin - Handle multiple HTTP calls
 43. forkJoin - Error Scenario
