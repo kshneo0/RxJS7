@@ -528,6 +528,9 @@ OBSERVER
 56. Flattening Operators - Dynamic HTTP Request
 
 -----------------------------
+
+57. Flattening Operators - Error Handling - First Solution
+
 -----------------------------
 -----------------------------
 -----------------------------
@@ -538,7 +541,7 @@ OBSERVER
 -----------------------------
 -----------------------------
 
-57. Flattening Operators - Error Handling - First Solution
+
 58. Flattening Operators - Error Handling - Second Solution
 59. Flattening Operators - Concurrency - concatMap
 60. Flattening Operators - switchMap
