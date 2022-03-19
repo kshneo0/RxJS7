@@ -22,4 +22,4 @@ fromEvent(fetchButton, "click")
     complete: () => console.log("Completed"),
   });
 
-// 오류가 발생한 후에소 다시 데이터를 가져오고 싶다면 어떻게 해야 하나?
+// 오류가 발생한 후에도 다시 데이터를 가져오고 싶다면 어떻게 해야 하나?

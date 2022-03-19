@@ -2,7 +2,7 @@ import { EMPTY, fromEvent, of } from "rxjs";
 import { ajax } from "rxjs/ajax";
 import { catchError, concatMap, map } from "rxjs/operators";
 
-// 58. Flattening Operators - Error Handling - Second Solution
+// 60. Flattening Operators - switchMap
 
 const endpointInput: HTMLInputElement =
   document.querySelector("input#endpoint");
@@ -24,5 +24,3 @@ fromEvent(fetchButton, "click")
     error: (err) => console.log("Error:", err),
     complete: () => console.log("Completed"),
   });
-
-// 오류가 발생한 후에소 다시 데이터를 가져오고 싶다면 어떻게 해야 하나?
