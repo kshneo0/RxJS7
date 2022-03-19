@@ -651,6 +651,19 @@ OBSERVER
 - Subject는 Subject 자체가 알림의 공유 소스이기 때문에 Hot Observable로 설명
 - 동일한 Subject에 대해 여러 구독을 가질 수 있으며 이 주제에 대해 'next'를 호출하면 이 다음 알림이 모든 구독자에게 멀티캐스트
 -----------------------------
+
+66. Subject vs Observable vs Observer
+
+- Observable인 동시에 Observer인 Subject의 이중성을 요약
+- Subject는 Observable이므로 구독하고 일반 Observable처럼 사용
+- 예) 'combineLatest' 또는 병합 연산자를 사용하여 Subject를 다른 Observable과 혼합
+- Subject 자체가 방출의 소스이기 때문에 Hot Observable처럼 작동
+- 각각의 새로운 구독이 Subject인 동일한 배출원에 연결된다는 것을 의미
+- 'fromEvent' 생성 기능을 사용하여 생성된 Observable과 마찬가지로 동일한 Subject에 대한 모든 구독은 동시에 동일한 알림
+- 예) 주제에 대한 구독이 몇 개 있다고 가정, 이러한 구독에 어떻게 무언가를 방출/멀티캐스트할 수 있나?
+- 이것이 Subject의 Observer 부분의 목적
+- Subject의 'next', 'error' 또는 'complete' 메소드를 호출하기만 하면 이러한 알림이 모든 활성 구독에 즉시 멀티캐스트
+
 -----------------------------
 -----------------------------
 -----------------------------
@@ -660,7 +673,7 @@ OBSERVER
 -----------------------------
 -----------------------------
 
-66. Subject vs Observable vs Observer
+
 67. Subject in Action
 68. BehaviorSubject - Concept
 69. BehaviorSubject in Action
